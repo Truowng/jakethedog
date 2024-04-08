@@ -453,13 +453,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: unset;
+  gap: 20px;
+  flex-direction: column;
+}
+#roadmap .roadmap-item .heading .icon {
+  max-width: 100px;
 }
 #roadmap .roadmap-item .heading .title {
   font-size: 24px;
   line-height: 30px;
   font-family: "Motley Force";
-  transform: translateX(-20px);
 }
 #roadmap .roadmap-item .list {
   margin-top: 33px;
@@ -467,11 +470,21 @@ img {
   width: -moz-fit-content;
   width: fit-content;
 }
+@media only screen and (max-width: 991px) {
+  #roadmap .roadmap-item .list {
+    list-style: none;
+  }
+}
 #roadmap .roadmap-item .list .item {
   margin-bottom: 10px;
 }
 #roadmap .roadmap-item .list .item:last-child {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 991px) {
+  #roadmap .roadmap-item .list .item {
+    text-align: center;
+  }
 }
 #roadmap .roadmap-item .line {
   margin-top: -5px;

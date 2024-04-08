@@ -379,23 +379,31 @@ img {
 
     .heading {
       width: 100%;
-      @include flex(center, center, unset);
-
+      @include flex(center, center, 20px);
+      flex-direction: column;
+      .icon {
+        max-width: 100px;
+      }
       .title {
         font-size: 24px;
         line-height: 30px;
         font-family: $font-motley;
-        transform: translateX(-20px);
       }
     }
     .list {
       margin-top: 33px;
       list-style: disc;
       width: fit-content;
+      @include tablet {
+        list-style: none;
+      }
       .item {
         margin-bottom: 10px;
         &:last-child {
           margin-bottom: 0;
+        }
+        @include tablet {
+          text-align: center;
         }
       }
     }
